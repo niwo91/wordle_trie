@@ -23,7 +23,8 @@
 * Finally, a list of possible word will print to the screen.
 
 ## Example Output
-      --------------------
+```
+    --------------------
    |NICK'S WORDLE HELPER|
     --------------------
 
@@ -59,4 +60,5 @@ ABOUT
 ## Possible Future additions
 * Including a menu for the program with the option to add your own dictionary
 * Including an option for input of letters you know are not in the word
+```
 
