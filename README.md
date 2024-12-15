@@ -14,7 +14,7 @@
 * In order to download the program, click on the green "code" button on the project repository, ensure https is selected, and copy the url to the clipboard. The url should be: https://github.com/niwo91/wordle_trie.git.
 * In the csel environment, (or any other compatible linux environment) type `git clone https://github.com/niwo91/wordle_trie.git`, either manually or by using ctrl+v to enter the URL, and press enter.
 * A new folder should be visible called "wordle_trie." Type `cd wordle_trie` and then press enter to enter this folder.
-* Compile the program by typing `g++ -0 wordle trie.cpp wordle.cpp` and pressing enter.
+* Compile the program by typing `g++ -o wordle trie.cpp wordle.cpp` and pressing enter.
 * Run the program with `./wordle`
 
 ## Using the program
