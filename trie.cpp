@@ -153,19 +153,19 @@ vector<string> possibilities(trie_node* root, string known, string unknown) {
 		}
 	}
 	traverse(root, positions, known, search);
-	int j = 0;
 	if (unknown.size() > 0) {
-		while (j < search.size()) {
-			string s = search.at(j);
-			for (int k = 0; k < unknown.size(); k++) {
+		for (int k = 0; k < unknown.size(); k++) {
+			int j = 0;
+			while(j < search.size()) {
+				string s = search.at(j);
 				char c = unknown.at(k);
-				if (c == s[0] || c == s[1] || c == s[2] || c == s[3] || c == s[4]) {
-					j++;
-				}
-				else {
+				if (c != s[0] && c != s[1] && c != s[2] && c != s[3] && c != s[4]) {
 					search.erase(search.begin() + j);
+					continue;
 				}
+				j++;
 			}
+		
 		}
 	}
 	cout << "\nYour word options are: " << endl;
@@ -184,12 +184,12 @@ void traverse(trie_node* root, vector<int> positions, string known, vector<strin
 		return;
 	}
 	if (!positions.empty()) {
-	for (int i = 0; i < positions.size(); i++) {
-		int pos = positions.at(i);
-		if (root->word_length - 1 == positions.at(i) && known.at(pos) != root->word.at(pos)) {
-			return;
+		for (int i = 0; i < positions.size(); i++) {
+			int pos = positions.at(i);
+			if (root->word_length - 1 == positions.at(i) && known.at(pos) != root->word.at(pos)) {
+				return;
+			}
 		}
-	}
 	}
 	for (int j = 0; j < root->children.size(); j++) {
 		traverse(root->children[j], positions, known, search);
