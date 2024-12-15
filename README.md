@@ -56,9 +56,10 @@ ABUSE
 ABUTS
 ABUZZ
 ABOUT
+```
 
 ## Possible Future additions
 * Including a menu for the program with the option to add your own dictionary
 * Including an option for input of letters you know are not in the word
-```
+
 
