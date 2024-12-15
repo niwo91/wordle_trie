@@ -3,10 +3,10 @@
 ## Background
 * This program was created for CSPB 2270 to showcase the "trie" data structure. The program's intent is to help you solve the online game Worlde. Worlde is a game which gives you 6 guesses to guess a 5 letter word. After each incorrect guess, the game will let you know if you have a known letter with a known position or a known letter with an unknown position.
 * The program's front end is a command line interface which allows you first put in known letters and their known positions, and then known letters which you don't know the positions of. The program will then print a list of possible words to the screen
-* The program uses a trie data structure on the back-end. The trie data structure is a type of tree for searching words. My trie has nodes which contain data about the string the node contains, the string's size and each node's "children."
+* The program uses a trie data structure on the back-end. The trie data structure is a type of tree for searching words. My trie has nodes which contain data about the string the node contains, the string's size, and each node's "children."
   * "Children" here is based off the prior node's character(s) in the string. For instance the node with the string "A" has, as children, all two letter strings which start with "A", like "AA", "AB", etc. All one letter words have two letter children, and two letter children have three letter children, and so on and so forth until there are nodes with 5 letter strings. Since each word in wordle is 5 letters exactly, I only need to search the bottom part of the trie for valid words.
   * This structure supports searching the trie quickly. For instance if I want to search the trie for a Word that starts with A and has a third letter of C, I can first search the first children of "A" only, then when I reach the third character I can include strings that only have "C".
-  * The root node of the tree has an empty string of "".
+  * The root node of the tree has an empty string of "". Each child of the root node is a single character string.
   * My trie uses a function to read a dictionary (dictionary.txt in the program) and place each 5 letter word into the trie based off the word's characters.
 
 ## Downloading the program
